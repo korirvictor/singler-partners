@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -37,16 +38,15 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
           className="mt-10"
         >
-          <a
-            href="#services"
+          <Link
+            to="/services"
             className="inline-block border border-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500"
           >
             Our Services
-          </a>
+          </Link>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
