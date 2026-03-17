@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
-    <footer id="contact" className="px-6 md:px-12 lg:px-24 py-16 border-t border-border">
+    <footer className="px-6 md:px-12 lg:px-24 py-16 border-t border-border">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           <div>
-            <div className="font-display font-extrabold text-lg tracking-tight text-foreground mb-4">
+            <Link to="/" className="font-display font-extrabold text-lg tracking-tight text-foreground mb-4 block">
               SINGLER <span className="text-primary">PARTNERS</span>
-            </div>
+            </Link>
             <p className="text-body font-body text-sm leading-relaxed max-w-xs">
               Regional intermediary, consultancy, and brokerage firm enabling projects across Central & Eastern Africa.
             </p>
@@ -15,14 +17,21 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-foreground mb-4">Navigation</h4>
             <div className="flex flex-col gap-3">
-              {["About", "Services", "Impact", "Markets", "Contact"].map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
+              {[
+                { label: "Home", href: "/" },
+                { label: "About", href: "/about" },
+                { label: "Services", href: "/services" },
+                { label: "Projects", href: "/projects" },
+                { label: "Regions", href: "/regions" },
+                { label: "Contact", href: "/contact" },
+              ].map((link) => (
+                <Link
+                  key={link.label}
+                  to={link.href}
                   className="text-body font-body text-sm hover:text-primary transition-colors duration-300"
                 >
-                  {link}
-                </a>
+                  {link.label}
+                </Link>
               ))}
             </div>
           </div>
