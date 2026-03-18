@@ -41,12 +41,12 @@ const AboutPreview = () => {
           <p className="text-body font-body text-base leading-relaxed mb-6">
             Singler Partners is a trusted advisory firm specializing in intelligence, cybersecurity, and risk management solutions. We support organizations navigating high-risk and dynamic markets by providing actionable insights and strategic guidance.
           </p>
-          <Link
+          <TransitionLink
             to="/about"
             className="inline-block border border-primary px-8 py-3 text-sm font-display font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500"
           >
             Learn More
-          </Link>
+          </TransitionLink>
         </motion.div>
       </div>
     </section>
