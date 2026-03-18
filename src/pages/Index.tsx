@@ -93,12 +93,12 @@ const ServicesPreview = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-12"
         >
-          <Link
+          <TransitionLink
             to="/services"
             className="inline-block border border-primary px-8 py-3 text-sm font-display font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500"
           >
             View All Services
-          </Link>
+          </TransitionLink>
         </motion.div>
       </div>
     </section>
