@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import TransitionLink from "./TransitionLink";
 
 const Footer = () => {
   return (
@@ -6,9 +7,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           <div>
-            <Link to="/" className="font-display font-extrabold text-lg tracking-tight text-foreground mb-4 block">
+            <TransitionLink to="/" className="font-display font-extrabold text-lg tracking-tight text-foreground mb-4 block">
               SINGLER <span className="text-primary">PARTNERS</span>
-            </Link>
+            </TransitionLink>
             <p className="text-body font-body text-sm leading-relaxed max-w-xs">
               Strategic intelligence, cybersecurity, and risk advisory solutions across Africa.
             </p>
@@ -25,13 +26,13 @@ const Footer = () => {
                 { label: "Regions", href: "/regions" },
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
-                <Link
+                <TransitionLink
                   key={link.label}
                   to={link.href}
                   className="text-body font-body text-sm hover:text-primary transition-colors duration-300"
                 >
                   {link.label}
-                </Link>
+                </TransitionLink>
               ))}
             </div>
           </div>
