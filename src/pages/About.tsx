@@ -3,7 +3,7 @@ import PageHero from "@/components/PageHero";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import aboutImage from "@/assets/about-image.jpg";
-import { Link } from "react-router-dom";
+import TransitionLink from "@/components/TransitionLink";
 
 const values = [
   { title: "Discretion", description: "We handle sensitive information with strict confidentiality and professionalism." },
@@ -94,9 +94,9 @@ const About = () => {
           <p className="text-body font-body text-lg leading-relaxed mb-10">
             Discover how Singler Partners can support your organization with intelligence-driven solutions.
           </p>
-          <Link to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
+          <TransitionLink to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
             Get in Touch
-          </Link>
+          </TransitionLink>
         </div>
       </section>
     </Layout>

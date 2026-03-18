@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import TransitionLink from "@/components/TransitionLink";
 import { ShieldCheck, Search, BarChart3, Fingerprint, Eye } from "lucide-react";
 
 const services = [
@@ -119,9 +119,9 @@ const Services = () => {
           <p className="text-body font-body text-lg leading-relaxed mb-10">
             Every engagement is unique. Let's discuss how we can support your specific security and intelligence objectives.
           </p>
-          <Link to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
+          <TransitionLink to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
             Start a Conversation
-          </Link>
+          </TransitionLink>
         </div>
       </section>
     </Layout>

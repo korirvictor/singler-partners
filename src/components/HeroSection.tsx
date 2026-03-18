@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import TransitionLink from "./TransitionLink";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -38,18 +38,18 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
           className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Link
+          <TransitionLink
             to="/services"
             className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500"
           >
             Explore Services
-          </Link>
-          <Link
+          </TransitionLink>
+          <TransitionLink
             to="/contact"
             className="inline-block border border-border px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-foreground hover:border-primary hover:text-primary transition-all duration-500"
           >
             Contact Us
-          </Link>
+          </TransitionLink>
         </motion.div>
       </div>
 

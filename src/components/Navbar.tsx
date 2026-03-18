@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import TransitionLink from "./TransitionLink";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -18,14 +19,14 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-24 py-6 flex items-center justify-between bg-background/80 backdrop-blur-md border-b border-border/50">
-      <Link to="/" className="font-display font-extrabold text-xl tracking-tight text-foreground">
+      <TransitionLink to="/" className="font-display font-extrabold text-xl tracking-tight text-foreground">
         SINGLER <span className="text-primary">PARTNERS</span>
-      </Link>
+      </TransitionLink>
 
       {/* Desktop */}
       <div className="hidden md:flex items-center gap-10">
         {navLinks.map((link) => (
-          <Link
+          <TransitionLink
             key={link.label}
             to={link.href}
             className={`font-body text-sm tracking-wide uppercase transition-colors duration-300 ${
@@ -35,7 +36,7 @@ const Navbar = () => {
             }`}
           >
             {link.label}
-          </Link>
+          </TransitionLink>
         ))}
       </div>
 
@@ -59,7 +60,7 @@ const Navbar = () => {
             className="absolute top-full left-0 right-0 bg-background border-b border-border px-6 py-8 flex flex-col gap-6 md:hidden"
           >
             {navLinks.map((link) => (
-              <Link
+              <TransitionLink
                 key={link.label}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
@@ -70,7 +71,7 @@ const Navbar = () => {
                 }`}
               >
                 {link.label}
-              </Link>
+              </TransitionLink>
             ))}
           </motion.div>
         )}

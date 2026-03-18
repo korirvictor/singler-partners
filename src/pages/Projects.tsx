@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import TransitionLink from "@/components/TransitionLink";
 import impactEnergy from "@/assets/impact-energy.jpg";
 import impactTrade from "@/assets/impact-trade.jpg";
 import aboutImage from "@/assets/about-image.jpg";
@@ -117,9 +117,9 @@ const Projects = () => {
           <div className="accent-line mx-auto mb-8" />
           <h2 className="font-display font-extrabold text-3xl md:text-4xl text-foreground uppercase tracking-tight mb-6">Discuss Your Needs</h2>
           <p className="text-body font-body text-lg leading-relaxed mb-10">We welcome the opportunity to explore how our expertise can support your security and intelligence objectives.</p>
-          <Link to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
+          <TransitionLink to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
             Get in Touch
-          </Link>
+          </TransitionLink>
         </div>
       </section>
     </Layout>
