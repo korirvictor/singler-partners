@@ -10,7 +10,7 @@ const Footer = () => {
               SINGLER <span className="text-primary">PARTNERS</span>
             </Link>
             <p className="text-body font-body text-sm leading-relaxed max-w-xs">
-              Regional intermediary, consultancy, and brokerage firm enabling projects across Central & Eastern Africa.
+              Strategic intelligence, cybersecurity, and risk advisory solutions across Africa.
             </p>
           </div>
 
@@ -21,7 +21,7 @@ const Footer = () => {
                 { label: "Home", href: "/" },
                 { label: "About", href: "/about" },
                 { label: "Services", href: "/services" },
-                { label: "Projects", href: "/projects" },
+                { label: "Experience", href: "/projects" },
                 { label: "Regions", href: "/regions" },
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
@@ -40,8 +40,8 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-foreground mb-4">Contact</h4>
             <div className="flex flex-col gap-3 text-body font-body text-sm">
               <span>info@singlerpartners.com</span>
-              <span>Kigali, Rwanda</span>
-              <span>Kinshasa, DRC</span>
+              <span>+254 722 388 151</span>
+              <span>Applewood Towers, Nairobi, Kenya</span>
             </div>
           </div>
         </div>
