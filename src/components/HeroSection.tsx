@@ -19,7 +19,7 @@ const HeroSection = () => {
         >
           <div className="accent-line mx-auto mb-8" />
           <h1 className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl text-foreground leading-tight tracking-tight uppercase">
-            Strategic Advisory for Central & Eastern Africa
+            Strategic Intelligence & Risk Advisory Across Africa
           </h1>
         </motion.div>
 
@@ -29,20 +29,26 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           className="text-body mt-6 text-lg md:text-xl font-body max-w-2xl mx-auto leading-relaxed"
         >
-          Enabling high-impact projects through intermediary solutions, consultancy, and brokerage across the region's most dynamic markets.
+          We deliver advanced intelligence, cybersecurity, and investigative solutions that help organizations operate securely and confidently in complex environments.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
-          className="mt-10"
+          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Link
             to="/services"
-            className="inline-block border border-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500"
+            className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500"
           >
-            Our Services
+            Explore Services
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-block border border-border px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-foreground hover:border-primary hover:text-primary transition-all duration-500"
+          >
+            Contact Us
           </Link>
         </motion.div>
       </div>

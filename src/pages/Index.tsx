@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 import aboutImage from "@/assets/about-image.jpg";
 import impactEnergy from "@/assets/impact-energy.jpg";
 import impactTrade from "@/assets/impact-trade.jpg";
-import { Handshake, TrendingUp, Shield, Globe } from "lucide-react";
+import { ShieldCheck, Search, BarChart3, Fingerprint } from "lucide-react";
 
 const servicePreview = [
-  { icon: Handshake, title: "Intermediary Services", description: "Connecting international organisations with regional partners." },
-  { icon: TrendingUp, title: "Strategic Advisory", description: "Market intelligence and feasibility assessments." },
-  { icon: Shield, title: "Risk & Compliance", description: "Navigating regulatory frameworks across jurisdictions." },
-  { icon: Globe, title: "Market Entry", description: "Establishing operations in Central and Eastern Africa." },
+  { icon: ShieldCheck, title: "Cybersecurity & Digital Protection", description: "Defending against evolving digital threats and protecting critical systems." },
+  { icon: Search, title: "Corporate Investigations", description: "Detailed investigations into fraud, misconduct, and operational risks." },
+  { icon: BarChart3, title: "Risk Advisory", description: "Predictive intelligence and strategic insights to anticipate and mitigate risks." },
+  { icon: Fingerprint, title: "Brand Protection & Anti-Counterfeiting", description: "Detecting and preventing counterfeit threats to safeguard brand integrity." },
 ];
 
 const AboutPreview = () => {
@@ -27,7 +27,7 @@ const AboutPreview = () => {
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <img src={aboutImage} alt="Infrastructure development in Africa" className="w-full h-[500px] object-cover" loading="lazy" />
+          <img src={aboutImage} alt="Intelligence and security operations in Africa" className="w-full h-[500px] object-cover" loading="lazy" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 40 }}
@@ -36,13 +36,10 @@ const AboutPreview = () => {
         >
           <div className="accent-line mb-8" />
           <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground uppercase tracking-tight mb-8">
-            About Singler Partners
+            Who We Are
           </h2>
           <p className="text-body font-body text-base leading-relaxed mb-6">
-            Singler Partners is a regional intermediary, consultancy, and brokerage firm dedicated to facilitating transformative projects across Central and Eastern Africa.
-          </p>
-          <p className="text-body font-body text-base leading-relaxed mb-10">
-            With deep regional expertise and an extensive network, we serve as the trusted bridge between international stakeholders and local opportunities.
+            Singler Partners is a trusted advisory firm specializing in intelligence, cybersecurity, and risk management solutions. We support organizations navigating high-risk and dynamic markets by providing actionable insights and strategic guidance.
           </p>
           <Link
             to="/about"
@@ -70,9 +67,9 @@ const ServicesPreview = () => {
           className="text-center mb-20"
         >
           <div className="accent-line mx-auto mb-8" />
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground uppercase tracking-tight">Our Services</h2>
-          <p className="text-body font-body mt-6 max-w-xl mx-auto">
-            Comprehensive advisory and intermediary solutions tailored to the region.
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground uppercase tracking-tight">Our Expertise</h2>
+          <p className="text-body font-body mt-6 max-w-2xl mx-auto">
+            Our integrated approach combines advanced technology, investigative expertise, and regional knowledge to safeguard your operations, reputation, and assets.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -108,55 +105,6 @@ const ServicesPreview = () => {
   );
 };
 
-const ImpactPreview = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section className="section-padding" ref={ref}>
-      <div className="max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="mb-20">
-          <div className="accent-line mb-8" />
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground uppercase tracking-tight">Sectors & Impact</h2>
-          <p className="text-body font-body mt-6 max-w-xl">Driving measurable outcomes across key sectors shaping the future of Central and Eastern Africa.</p>
-        </motion.div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-border">
-          {[
-            { image: impactEnergy, title: "Energy & Power", stats: "12 Projects", description: "Facilitating renewable energy projects that drive sustainable development." },
-            { image: impactTrade, title: "Trade & Logistics", stats: "8 Markets", description: "Enabling cross-border trade infrastructure and logistics solutions." },
-          ].map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="relative group overflow-hidden bg-background"
-            >
-              <div className="aspect-[16/10] overflow-hidden">
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-                <div className="absolute inset-0 bg-background/60 group-hover:bg-background/40 transition-colors duration-500" />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-                <span className="text-primary text-xs font-display uppercase tracking-widest">{project.stats}</span>
-                <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground uppercase mt-2">{project.title}</h3>
-                <p className="text-body font-body text-sm mt-3 max-w-md leading-relaxed">{project.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        <div className="text-center mt-12">
-          <Link
-            to="/projects"
-            className="inline-block border border-primary px-8 py-3 text-sm font-display font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500"
-          >
-            View Projects
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const CTAHome = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -165,9 +113,9 @@ const CTAHome = () => {
     <section className="section-padding" ref={ref}>
       <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="max-w-4xl mx-auto text-center">
         <div className="accent-line mx-auto mb-8" />
-        <h2 className="font-display font-extrabold text-3xl md:text-5xl text-foreground uppercase tracking-tight leading-tight">Let's Build the Future Together</h2>
+        <h2 className="font-display font-extrabold text-3xl md:text-5xl text-foreground uppercase tracking-tight leading-tight">Secure Your Operations</h2>
         <p className="text-body font-body mt-6 text-lg max-w-xl mx-auto leading-relaxed">
-          Whether you're exploring new markets or seeking a trusted regional partner, we're ready to help you navigate the path forward.
+          Secure your operations with intelligence-driven strategies and expert advisory.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
@@ -188,7 +136,6 @@ const Index = () => {
       <HeroSection />
       <AboutPreview />
       <ServicesPreview />
-      <ImpactPreview />
       <CTAHome />
     </Layout>
   );

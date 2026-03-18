@@ -11,37 +11,37 @@ import heroBg from "@/assets/hero-bg.jpg";
 const sectors = [
   {
     image: impactEnergy,
-    title: "Energy & Power",
-    stats: "12 Projects",
-    description: "Facilitating renewable energy projects and power infrastructure that drive sustainable development across the region, from solar installations to grid modernisation.",
+    title: "Cybersecurity Operations",
+    stats: "Multiple Engagements",
+    description: "Designing and implementing resilient cybersecurity frameworks for organizations across Africa, protecting critical digital infrastructure.",
   },
   {
     image: impactTrade,
-    title: "Trade & Logistics",
-    stats: "8 Markets",
-    description: "Enabling cross-border trade infrastructure, logistics corridors, and supply chain solutions that connect growing economies across Central and Eastern Africa.",
+    title: "Corporate Investigations",
+    stats: "Cross-Industry",
+    description: "Conducting detailed investigations into fraud, misconduct, and operational risks—delivering clear findings that drive decisive action.",
   },
   {
     image: aboutImage,
-    title: "Mining & Natural Resources",
-    stats: "6 Engagements",
-    description: "Advisory and intermediary support for responsible mining operations and natural resource management, ensuring compliance and community benefit.",
+    title: "Brand Protection",
+    stats: "Global Reach",
+    description: "Helping organizations detect, prevent, and respond to counterfeit threats, safeguarding brand integrity and intellectual property.",
   },
   {
     image: heroBg,
-    title: "Financial Services",
-    stats: "10 Transactions",
-    description: "Supporting financial institutions, fintech ventures, and investment vehicles seeking to deploy capital across the region's high-growth markets.",
+    title: "Risk Intelligence",
+    stats: "Multi-Market",
+    description: "Providing predictive intelligence and strategic insights that enable organizations to anticipate and mitigate risks across African markets.",
   },
 ];
 
 const capabilities = [
-  "Project Origination & Structuring",
-  "Due Diligence & Risk Assessment",
-  "Stakeholder Coordination",
-  "Regulatory Navigation",
-  "Transaction Advisory",
-  "Post-Deal Integration Support",
+  "Threat Assessment & Analysis",
+  "Digital Forensics",
+  "Surveillance Operations",
+  "Due Diligence & Screening",
+  "Incident Response",
+  "Strategic Advisory",
 ];
 
 const Projects = () => {
@@ -53,8 +53,8 @@ const Projects = () => {
   return (
     <Layout>
       <PageHero
-        title="Projects & Experience"
-        subtitle="A proven track record across the sectors shaping the future of Central and Eastern Africa."
+        title="Experience & Impact"
+        subtitle="We partner with organizations across industries to deliver intelligence-led solutions that enhance security, reduce risk, and support strategic growth."
         backgroundImage={impactEnergy}
       />
 
@@ -62,7 +62,8 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={sectorsInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="mb-20">
             <div className="accent-line mb-8" />
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground uppercase tracking-tight">Sectors We Serve</h2>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground uppercase tracking-tight">Areas of Impact</h2>
+            <p className="text-body font-body mt-6 max-w-xl">Our experience spans multiple African markets, enabling us to provide localized insights with global relevance.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[1px] bg-border">
@@ -96,7 +97,7 @@ const Projects = () => {
             <div className="accent-line mb-8" />
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground uppercase tracking-tight mb-6">Our Capabilities</h2>
             <p className="text-body font-body text-base leading-relaxed">
-              Across every engagement, we bring a disciplined approach to project execution—ensuring rigorous analysis, stakeholder alignment, and measurable impact.
+              Across every engagement, we bring a disciplined approach—ensuring rigorous analysis, operational precision, and measurable impact.
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={capInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, delay: 0.2 }}>
@@ -114,8 +115,8 @@ const Projects = () => {
       <section className="section-padding">
         <div className="max-w-3xl mx-auto text-center">
           <div className="accent-line mx-auto mb-8" />
-          <h2 className="font-display font-extrabold text-3xl md:text-4xl text-foreground uppercase tracking-tight mb-6">Discuss Your Project</h2>
-          <p className="text-body font-body text-lg leading-relaxed mb-10">We welcome the opportunity to explore how our experience can support your next initiative.</p>
+          <h2 className="font-display font-extrabold text-3xl md:text-4xl text-foreground uppercase tracking-tight mb-6">Discuss Your Needs</h2>
+          <p className="text-body font-body text-lg leading-relaxed mb-10">We welcome the opportunity to explore how our expertise can support your security and intelligence objectives.</p>
           <Link to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
             Get in Touch
           </Link>

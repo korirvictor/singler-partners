@@ -3,73 +3,62 @@ import PageHero from "@/components/PageHero";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { Handshake, TrendingUp, Shield, Globe, Building2, FileText } from "lucide-react";
+import { ShieldCheck, Search, BarChart3, Fingerprint, Eye } from "lucide-react";
 
 const services = [
   {
-    icon: Handshake,
-    title: "Intermediary Services",
-    description: "Connecting international organisations with regional partners through compliant, transparent brokerage solutions.",
+    icon: ShieldCheck,
+    title: "Cybersecurity & Digital Protection",
+    description: "We design resilient cybersecurity frameworks to defend against evolving digital threats and protect critical systems.",
     details: [
-      "Deal structuring and negotiation support",
-      "Stakeholder identification and introductions",
-      "Cross-border transaction facilitation",
-      "Partnership development and management",
+      "Threat assessment and vulnerability analysis",
+      "Security architecture design",
+      "Incident response planning",
+      "Digital infrastructure protection",
     ],
   },
   {
-    icon: TrendingUp,
-    title: "Strategic Advisory",
-    description: "Providing market intelligence, feasibility assessments, and strategic counsel for complex regional engagements.",
+    icon: Search,
+    title: "Corporate Investigations",
+    description: "We conduct detailed investigations into fraud, misconduct, and operational risks—delivering clear, actionable findings.",
     details: [
-      "Market entry strategy development",
-      "Competitive landscape analysis",
-      "Investment feasibility studies",
-      "Strategic planning and execution support",
+      "Fraud detection and analysis",
+      "Misconduct investigations",
+      "Operational risk assessment",
+      "Evidence gathering and reporting",
     ],
   },
   {
-    icon: Shield,
-    title: "Risk & Compliance",
-    description: "Navigating regulatory frameworks, due diligence processes, and compliance requirements across multiple jurisdictions.",
+    icon: BarChart3,
+    title: "Risk Advisory & Intelligence",
+    description: "We provide predictive intelligence and strategic insights that enable organizations to anticipate and mitigate risks effectively.",
     details: [
-      "Regulatory landscape mapping",
-      "Due diligence and background checks",
-      "Compliance framework development",
-      "Risk assessment and mitigation strategies",
+      "Predictive threat intelligence",
+      "Strategic risk assessment",
+      "Market and political risk analysis",
+      "Due diligence and background screening",
     ],
   },
   {
-    icon: Globe,
-    title: "Market Entry",
-    description: "Guiding stakeholders through the intricacies of establishing operations in Central and Eastern African markets.",
+    icon: Fingerprint,
+    title: "Brand Protection & Anti-Counterfeiting",
+    description: "We help organizations detect, prevent, and respond to counterfeit threats, safeguarding brand integrity and intellectual property globally.",
     details: [
-      "Market viability assessments",
-      "Local entity establishment support",
-      "Licensing and permits guidance",
-      "Cultural and business practice advisory",
+      "Counterfeit detection and monitoring",
+      "Intellectual property protection",
+      "Supply chain integrity assessment",
+      "Enforcement support and coordination",
     ],
   },
   {
-    icon: Building2,
-    title: "Infrastructure Advisory",
-    description: "Supporting large-scale infrastructure projects from inception through financing, procurement, and delivery.",
+    icon: Eye,
+    title: "Surveillance & Intelligence Gathering",
+    description: "We deploy discreet surveillance strategies to uncover critical insights while maintaining operational confidentiality.",
     details: [
-      "Project scoping and feasibility",
-      "Financing structure advisory",
-      "Procurement process management",
-      "Stakeholder coordination",
-    ],
-  },
-  {
-    icon: FileText,
-    title: "Government Relations",
-    description: "Facilitating productive dialogue between private sector entities and government institutions at all levels.",
-    details: [
-      "Policy landscape navigation",
-      "Government stakeholder engagement",
-      "Public-private partnership facilitation",
-      "Institutional relationship management",
+      "Covert surveillance operations",
+      "Open-source intelligence (OSINT)",
+      "Asset tracing and tracking",
+      "Operational security management",
     ],
   },
 ];
@@ -82,7 +71,7 @@ const Services = () => {
     <Layout>
       <PageHero
         title="Our Services"
-        subtitle="Comprehensive advisory and intermediary solutions tailored to the unique challenges of Central and Eastern Africa."
+        subtitle="Advanced intelligence, cybersecurity, and investigative solutions tailored to complex environments."
       />
 
       <section className="section-padding" ref={ref}>
@@ -128,7 +117,7 @@ const Services = () => {
             Need a Tailored Solution?
           </h2>
           <p className="text-body font-body text-lg leading-relaxed mb-10">
-            Every engagement is unique. Let's discuss how we can support your specific objectives.
+            Every engagement is unique. Let's discuss how we can support your specific security and intelligence objectives.
           </p>
           <Link to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
             Start a Conversation

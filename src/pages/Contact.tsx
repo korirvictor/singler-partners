@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -11,7 +11,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
     alert("Thank you for your enquiry. We will be in touch shortly.");
     setFormData({ name: "", email: "", company: "", subject: "", message: "" });
   };
@@ -19,8 +18,8 @@ const Contact = () => {
   return (
     <Layout>
       <PageHero
-        title="Contact"
-        subtitle="We welcome the opportunity to discuss how Singler Partners can support your objectives."
+        title="Contact Us"
+        subtitle="Reach out to discuss how we can support your organization with intelligence, cybersecurity, and risk advisory solutions."
       />
 
       <section className="section-padding" ref={formRef}>
@@ -34,7 +33,7 @@ const Contact = () => {
             <div className="accent-line mb-8" />
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground uppercase tracking-tight mb-8">Get in Touch</h2>
             <p className="text-body font-body text-base leading-relaxed mb-12">
-              Whether you're exploring new markets, evaluating partnerships, or seeking strategic advisory for the region, our team is ready to assist.
+              Whether you need cybersecurity support, corporate investigations, or strategic risk advisory, our team is ready to assist.
             </p>
 
             <div className="space-y-8">
@@ -42,16 +41,9 @@ const Contact = () => {
                 <Mail className="w-5 h-5 text-primary mt-1 shrink-0" strokeWidth={1.5} />
                 <div>
                   <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-foreground mb-1">Email</h4>
-                  <span className="text-body font-body text-sm">info@singlerpartners.com</span>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <MapPin className="w-5 h-5 text-primary mt-1 shrink-0" strokeWidth={1.5} />
-                <div>
-                  <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-foreground mb-1">Offices</h4>
                   <div className="text-body font-body text-sm space-y-1">
-                    <p>Kigali, Rwanda (HQ)</p>
-                    <p>Kinshasa, DRC</p>
+                    <p>info@singlerpartners.com</p>
+                    <p>support@singlerpartners.com</p>
                   </div>
                 </div>
               </div>
@@ -59,7 +51,21 @@ const Contact = () => {
                 <Phone className="w-5 h-5 text-primary mt-1 shrink-0" strokeWidth={1.5} />
                 <div>
                   <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-foreground mb-1">Phone</h4>
-                  <span className="text-body font-body text-sm">+250 XXX XXX XXX</span>
+                  <span className="text-body font-body text-sm">+254 722 388 151</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <MessageCircle className="w-5 h-5 text-primary mt-1 shrink-0" strokeWidth={1.5} />
+                <div>
+                  <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-foreground mb-1">WhatsApp</h4>
+                  <span className="text-body font-body text-sm">+254 722 388 151</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 text-primary mt-1 shrink-0" strokeWidth={1.5} />
+                <div>
+                  <h4 className="font-display font-semibold text-sm uppercase tracking-widest text-foreground mb-1">Location</h4>
+                  <span className="text-body font-body text-sm">Applewood Towers, Nairobi, Kenya</span>
                 </div>
               </div>
             </div>
