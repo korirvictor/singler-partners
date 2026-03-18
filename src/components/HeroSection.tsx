@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import TransitionLink from "./TransitionLink";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {

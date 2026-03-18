@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import TransitionLink from "@/components/TransitionLink";
 import impactEnergy from "@/assets/impact-energy.jpg";
 import impactTrade from "@/assets/impact-trade.jpg";
 import aboutImage from "@/assets/about-image.jpg";

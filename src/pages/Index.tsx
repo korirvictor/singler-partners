@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import TransitionLink from "@/components/TransitionLink";
 import aboutImage from "@/assets/about-image.jpg";
 import impactEnergy from "@/assets/impact-energy.jpg";
 import impactTrade from "@/assets/impact-trade.jpg";

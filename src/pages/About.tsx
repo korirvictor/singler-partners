@@ -3,7 +3,7 @@ import PageHero from "@/components/PageHero";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import aboutImage from "@/assets/about-image.jpg";
-import { Link } from "react-router-dom";
+import TransitionLink from "@/components/TransitionLink";
 
 const values = [
   { title: "Discretion", description: "We handle sensitive information with strict confidentiality and professionalism." },
