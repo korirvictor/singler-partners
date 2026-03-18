@@ -118,12 +118,12 @@ const CTAHome = () => {
           Secure your operations with intelligence-driven strategies and expert advisory.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
+          <TransitionLink to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
             Get in Touch
-          </Link>
-          <Link to="/services" className="inline-block border border-border px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-foreground hover:border-primary hover:text-primary transition-all duration-500">
+          </TransitionLink>
+          <TransitionLink to="/services" className="inline-block border border-border px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-foreground hover:border-primary hover:text-primary transition-all duration-500">
             Explore Services
-          </Link>
+          </TransitionLink>
         </div>
       </motion.div>
     </section>

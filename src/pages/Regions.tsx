@@ -84,9 +84,9 @@ const Regions = () => {
           <p className="text-body font-body text-lg leading-relaxed mb-10">
             Our regional footprint is growing. Let's explore how we can support your operations across Africa.
           </p>
-          <Link to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
+          <TransitionLink to="/contact" className="inline-block border border-primary bg-primary px-10 py-4 text-sm font-display font-semibold uppercase tracking-widest text-primary-foreground hover:bg-transparent hover:text-primary transition-all duration-500">
             Contact Us
-          </Link>
+          </TransitionLink>
         </div>
       </section>
     </Layout>
